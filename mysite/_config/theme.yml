@@ -1,0 +1,10 @@
+---
+Name: mytheme
+---
+SilverStripe\View\SSViewer:
+  themes:
+    - 'bootstrap'
+    - 'simple'
+    - '$default'
+SilverStripe\i18n\i18n:
+  default_locale: 'en_GB'
