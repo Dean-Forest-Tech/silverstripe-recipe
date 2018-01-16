@@ -16,7 +16,10 @@
         "silverstripe/reports": "4.0.1@stable",
         "silverstripe/siteconfig": "4.0.1@stable",
         "silverstripe/versioned": "1.0.1@stable",
-        "silverstripe-themes/simple": "^3.1"
+        "silverstripe-themes/simple": "^3.1",
+        "silverstripe/blog": "master",
+        "silverstripe/userforms": "5.*",
+        "silverstripe/widgets": "master"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"

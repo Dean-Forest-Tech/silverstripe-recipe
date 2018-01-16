@@ -12,11 +12,13 @@
 
 # ignore default modules from composer
 /asset-admin/
+/assets/
 /campaign-admin/
 /cms/
 /framework/
 /graphql/
 /reports/
+/resources/
 /silverstripe-admin/
 /silverstripe-assets/
 /silverstripe-errorpage/
