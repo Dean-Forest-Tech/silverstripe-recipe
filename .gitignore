@@ -13,6 +13,7 @@
 # ignore default modules from composer
 /asset-admin/
 /assets/
+/blog/
 /campaign-admin/
 /cms/
 /framework/
