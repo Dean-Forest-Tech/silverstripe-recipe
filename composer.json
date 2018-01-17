@@ -27,7 +27,8 @@
     "extra": {
         "project-files": [
             ".htaccess",
-            "app/*"
+            "app/*",
+            "themes/custom/*"
         ]
     },
     "config": {
