@@ -5,11 +5,17 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\CheckboxField;
 
 class AppSiteConfig extends DataExtension
 {
+    private static $db = array(
+        'TileBackground' => 'Boolean'
+    );
+
     private static $has_one = [
         'Logo' => Image::class,
+        'Background' => Image::class,
         'ContactPage' => ContactPage::class
     ];
 
@@ -22,6 +28,19 @@ class AppSiteConfig extends DataExtension
                 "Site Logo"
             ),
             'Tagline'
+        );
+
+        $fields->addFieldToTab(
+            'Root.Main',
+            UploadField::create(
+                "Background",
+                "Site Background"
+            )
+        );
+
+        $fields->addFieldToTab(
+            'Root.Main',
+            CheckboxField::create("TileBackground")
         );
 
         $fields->addFieldToTab(
