@@ -34,7 +34,11 @@ class HomePageController extends PageController
 		$sections = ArrayList::create();
 		if ($pages) {
 			foreach ($pages as $page) {
-				$page->Layout = $page->renderWith( array($page->ClassName.'_homepage','Page_homepage','HomePage_section') );
+				$page->Layout = $page->renderWith([
+                    $page->ClassName.'_homepage',
+                    'Page_homepage',
+                    'HomePage_section'
+                ]);
 				
 				$sections->push($page);
 			}
