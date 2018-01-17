@@ -32,7 +32,9 @@
             <% if $ClassName == 'HomePage' %></span><% end_if %>
         </h1>
     </div>
-    <% include BreadCrumbs %>
+    <% if $ClassName != 'HomePage' %>
+        <% include BreadCrumbs %>
+    <% end_if %>
 </div>
 <% if $ClassName != 'HomePage' %>
     <hr />

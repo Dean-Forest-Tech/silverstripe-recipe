@@ -6,9 +6,6 @@
         </div>
     <% end_if %>
 	<div class="col-sm content" role="main">
-		<p>$Content.Summary</p>
-		$Form
-        $PageComments
-        <p><a class="btn btn-link" href="$Link">$MenuTitle</a></p>
+		<p>$Content.Summary <a href="$Link"><strong>Read more $MenuTitle</strong></a></p>
 	</div>
 </div>

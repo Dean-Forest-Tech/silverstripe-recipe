@@ -23,7 +23,7 @@
                 </p>
             <% end_if %>
         <% end_if %>
-        <p><a class="btn btn-link" href="$Link">$MenuTitle</a></p>
+        <p><a href="$Link"><strong>$MenuTitle</strong></a></p>
     </div>
 	<div class="col-sm" role="main">
         <% if $MapEmbed %>
