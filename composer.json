@@ -28,9 +28,7 @@
             ".htaccess",
             "app/*",
             "themes/custom/*",
-            "index.php",
-            "install.php",
-            "install-frameworkmissing.html"
+            "index.php"
         ]
     },
     "config": {
