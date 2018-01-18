@@ -5,14 +5,20 @@
     "homepage": "http://silverstripe.org",
     "license": "BSD-3-Clause",
     "require": {
-        "silverstripe/recipe-core": "1.0.1@stable",
+        "silverstripe/recipe-plugin": "^1",
+        "silverstripe/assets": "1.0.*@stable",
+        "silverstripe/config": "1.0.*@stable",
+        "silverstripe/framework": "4.0.*@stable",
         "silverstripe/asset-admin": "1.0.1@stable",
         "silverstripe/cms": "4.0.1@stable",
         "silverstripe/errorpage": "1.0.1@stable",
         "silverstripe/blog": "master",
         "silverstripe/userforms": "5.*",
         "silverstripe/widgets": "master",
-        "ilateral/silverstripe-bootstrap-4": "dev-master"
+        "ilateral/silverstripe-bootstrap-4": "dev-master",
+        "axllent/silverstripe-scaled-uploads": "^2.1",
+        "i-lateral/silverstripe-childhubpage": "^2.0",
+        "jonom/focuspoint": "ss4-upgrade-dev"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"
@@ -21,7 +27,10 @@
         "project-files": [
             ".htaccess",
             "app/*",
-            "themes/custom/*"
+            "themes/custom/*",
+            "index.php",
+            "install.php",
+            "install-frameworkmissing.html"
         ]
     },
     "config": {
