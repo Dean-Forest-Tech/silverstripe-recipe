@@ -18,7 +18,8 @@
         "ilateral/silverstripe-bootstrap-4": "dev-master",
         "axllent/silverstripe-scaled-uploads": "^2.1",
         "i-lateral/silverstripe-childhubpage": "^2.0",
-        "jonom/focuspoint": "ss4-upgrade-dev"
+        "jonom/focuspoint": "ss4-upgrade-dev",
+        "heyday/silverstripe-gridfieldversionedorderablerows": "ss4-upgrade-dev"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"

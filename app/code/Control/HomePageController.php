@@ -30,7 +30,7 @@ class HomePageController extends PageController
 
     public function getRenderedSections()
     {
-        $pages = $this->Sections();
+        $pages = $this->Sections()->sort('HomeSort','ASC');
 		$sections = ArrayList::create();
 		if ($pages) {
 			foreach ($pages as $page) {
