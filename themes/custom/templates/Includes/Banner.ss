@@ -7,7 +7,7 @@
         </div>
     <% else_if $FeaturedImage.exists() %>
         <div class="row">
-            <p class="banner-image"><img class="img-fluid" src="$FeaturedImage.Fill(1200,500).URL" alt="$FeaturedImage.Title"></p>
+            <p class="banner-image"><img class="img-fluid" src="$FeaturedImage.FocusFill(1200,500).URL" alt="$FeaturedImage.Title"></p>
         </div>	
     <% end_if %>
     <div class="col">

@@ -31,7 +31,7 @@
                 $MapEmbed.RAW
             </div>
         <% else_if $FeaturedImage %>
-            <p class="banner-image"><img class="img-fluid" src="$FeaturedImage.Fill(1200,500).URL" alt="$FeaturedImage.Title"></p>
+            <p class="banner-image"><img class="img-fluid" src="$FeaturedImage.FocusFill(1200,500).URL" alt="$FeaturedImage.Title"></p>
         <% end_if %>
     </div>
 </div>
