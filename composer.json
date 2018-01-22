@@ -19,7 +19,10 @@
         "axllent/silverstripe-scaled-uploads": "^2.1",
         "i-lateral/silverstripe-childhubpage": "^2.0",
         "jonom/focuspoint": "ss4-upgrade-dev",
-        "heyday/silverstripe-gridfieldversionedorderablerows": "ss4-upgrade-dev"
+        "heyday/silverstripe-gridfieldversionedorderablerows": "ss4-upgrade-dev",
+        "i-lateral/silverstripe-searchable": "^2.0",
+        "symbiote/silverstripe-gridfieldextensions": "3.1 as 3.0.x-dev",
+        "i-lateral/silverstripe-custommenus": "^2.0"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"

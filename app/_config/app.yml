@@ -12,3 +12,9 @@ SilverStripe\Blog\Model\Blog:
 SilverStripe\Blog\Model\BlogPost:
   extensions:
     - SilverStripe\Widgets\Extensions\WidgetPageExtension
+Axllent\ScaledUploads\ScaledUploads:
+  max_width: 1920
+  max_height: 1920
+ilateral\SilverStripe\Searchable\Searchable:
+  objects:
+    "Page": ["Title","MenuTitle","Content","URLSegment"]

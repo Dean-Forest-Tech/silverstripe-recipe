@@ -15,6 +15,7 @@ class AppSiteConfig extends DataExtension
 
     private static $has_one = [
         'Logo' => Image::class,
+        'Icon' => Image::class,
         'Background' => Image::class,
         'ContactPage' => ContactPage::class
     ];
@@ -27,6 +28,16 @@ class AppSiteConfig extends DataExtension
                 "Logo",
                 "Site Logo"
             ),
+            'Tagline'
+        );
+
+        $fields->addFieldToTab(
+            'Root.Main',
+            UploadField::create(
+                "Icon",
+                "Site Icon"
+            )->setRightTitle('Used for favicon and touch icons - this must be a .png or .gif')
+            ->setAllowedExtensions(['png', 'gif']),
             'Tagline'
         );
 
