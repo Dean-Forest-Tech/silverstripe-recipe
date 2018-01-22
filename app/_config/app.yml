@@ -18,3 +18,7 @@ Axllent\ScaledUploads\ScaledUploads:
 ilateral\SilverStripe\Searchable\Searchable:
   objects:
     "Page": ["Title","MenuTitle","Content","URLSegment"]
+
+SilverStripe\Core\Injector\Injector:
+  Fractas\CookiePolicy\CookiePolicy:
+    class: AppCookiePolicy
