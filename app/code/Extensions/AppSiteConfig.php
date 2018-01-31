@@ -9,9 +9,9 @@ use SilverStripe\Forms\CheckboxField;
 
 class AppSiteConfig extends DataExtension
 {
-    private static $db = array(
+    private static $db = [
         'TileBackground' => 'Boolean'
-    );
+    ];
 
     private static $has_one = [
         'Logo' => Image::class,
@@ -22,45 +22,37 @@ class AppSiteConfig extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldToTab(
+        $fields->addFieldsToTab(
             'Root.Main',
-            UploadField::create(
-                "Logo",
-                "Site Logo"
-            ),
+            [
+                UploadField::create(
+                    "Logo",
+                    "Site Logo"
+                ),
+                UploadField::create(
+                    "Icon",
+                    "Site Icon"
+                )->setRightTitle('Used for favicon and touch icons - this must be a .png or .gif')
+                ->setAllowedExtensions(['png', 'gif'])
+            ],
             'Tagline'
         );
 
-        $fields->addFieldToTab(
+        $fields->addFieldsToTab(
             'Root.Main',
-            UploadField::create(
-                "Icon",
-                "Site Icon"
-            )->setRightTitle('Used for favicon and touch icons - this must be a .png or .gif')
-            ->setAllowedExtensions(['png', 'gif']),
-            'Tagline'
-        );
+            [
 
-        $fields->addFieldToTab(
-            'Root.Main',
-            UploadField::create(
-                "Background",
-                "Site Background"
-            )
-        );
-
-        $fields->addFieldToTab(
-            'Root.Main',
-            CheckboxField::create("TileBackground")
-        );
-
-        $fields->addFieldToTab(
-            'Root.Main',
-            TreeDropdownField::create(
-                "ContactPageID",
-                "Link to 'contact' page",
-                'ContactPage'
-            )
+                UploadField::create(
+                    "Background",
+                    "Site Background"
+                ),
+                CheckboxField::create("TileBackground"),
+                TreeDropdownField::create(
+                    "ContactPageID",
+                    "Link to 'contact' page",
+                    'ContactPage'
+                )
+            ]
         );
     }
 }

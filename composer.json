@@ -11,7 +11,7 @@
         "silverstripe/framework": "4.0.*@stable",
         "silverstripe/asset-admin": "1.0.1@stable",
         "silverstripe/cms": "4.0.1@stable",
-        "silverstripe/errorpage": "1.0.1@stable",
+        "silverstripe/errorpage": "^1.0",
         "silverstripe/blog": "master",
         "silverstripe/userforms": "5.*",
         "silverstripe/widgets": "master",
@@ -20,10 +20,10 @@
         "i-lateral/silverstripe-childhubpage": "^2.0",
         "jonom/focuspoint": "ss4-upgrade-dev",
         "heyday/silverstripe-gridfieldversionedorderablerows": "ss4-upgrade-dev",
-        "i-lateral/silverstripe-searchable": "^2.0",
         "symbiote/silverstripe-gridfieldextensions": "3.1 as 3.0.x-dev",
         "i-lateral/silverstripe-custommenus": "^2.0",
-        "fractas/cookiepolicy": "^2.0"
+        "fractas/cookiepolicy": "^2.0",
+        "silverstripe/graphql": "^1.0"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"
@@ -33,7 +33,8 @@
             ".htaccess",
             "app/*",
             "themes/custom/*",
-            "index.php"
+            "index.php",
+            "web.config"
         ]
     },
     "config": {
