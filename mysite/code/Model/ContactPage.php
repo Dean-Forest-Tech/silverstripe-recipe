@@ -42,4 +42,14 @@ class ContactPage extends Page
 
         return $fields;
     }
+
+    public function getInlineAddress()
+    {
+        return trim(preg_replace('/\s\s+/', ', ', $this->Address));
+    }
+
+    public function getTrimmedPhoneNumber()
+    {
+        return trim(str_replace(" ","",$this->PhoneNumber));
+    }
 }

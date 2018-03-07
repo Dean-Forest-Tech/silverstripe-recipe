@@ -5,14 +5,7 @@
     "homepage": "http://silverstripe.org",
     "license": "BSD-3-Clause",
     "require": {
-        "silverstripe/recipe-plugin": "^1",
-        "silverstripe/admin": "1.0.*@stable",
-        "silverstripe/assets": "1.0.*@stable",
-        "silverstripe/config": "1.0.*@stable",
-        "silverstripe/framework": "4.0.*@stable",
-        "silverstripe/asset-admin": "1.0.*@stable",
-        "silverstripe/cms": "4.0.*@stable",
-        "silverstripe/errorpage": "^1.0",
+        "silverstripe/recipe-cms": "^1.0",
         "silverstripe/blog": "master",
         "silverstripe/userforms": "5.*",
         "silverstripe/widgets": "master",
@@ -23,9 +16,7 @@
         "heyday/silverstripe-gridfieldversionedorderablerows": "ss4-upgrade-dev",
         "symbiote/silverstripe-gridfieldextensions": "3.1 as 3.0.x-dev",
         "i-lateral/silverstripe-custommenus": "^2.0",
-        "fractas/cookiepolicy": "^2.0",
-        "silverstripe/graphql": "1.0.*@stable",
-        "silverstripe/siteconfig": "4.0.*@stable"
+        "fractas/cookiepolicy": "^2.0"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"

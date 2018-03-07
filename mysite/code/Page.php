@@ -15,6 +15,10 @@ class Page extends SiteTree
         'HomePage' => HomePage::class
     ];
 
+    private static $owns = [
+        'FeaturedImage'
+    ];
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
