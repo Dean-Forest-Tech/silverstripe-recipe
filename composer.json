@@ -6,7 +6,7 @@
     "license": "BSD-3-Clause",
     "require": {
         "silverstripe/recipe-plugin": "^1",
-        "silverstripe/admin": "1.0.1@stable",
+        "silverstripe/admin": "1.0.*@stable",
         "silverstripe/assets": "1.0.*@stable",
         "silverstripe/config": "1.0.*@stable",
         "silverstripe/framework": "4.0.*@stable",
