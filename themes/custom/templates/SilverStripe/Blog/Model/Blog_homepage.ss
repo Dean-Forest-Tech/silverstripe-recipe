@@ -2,7 +2,9 @@
 <% if $BlogPosts.Exists %>
     <div class="row">
         <% loop $BlogPosts.Limit(4) %>
-            <% include SilverStripe\\Blog\\PostSummary_grid %>
+            <div class="col-sm text-center">
+                <% include SilverStripe\\Blog\\PostSummary %>
+            </div>
         <% end_loop %>
     </div>
 <% else %>
