@@ -12,7 +12,7 @@
         "ilateral/silverstripe-bootstrap-4": "dev-master",
         "axllent/silverstripe-scaled-uploads": "^2.1",
         "i-lateral/silverstripe-childhubpage": "^2.0",
-        "jonom/focuspoint": "ss4-upgrade-dev",
+        "jonom/focuspoint": "^3.0",
         "heyday/silverstripe-gridfieldversionedorderablerows": "ss4-upgrade-dev",
         "symbiote/silverstripe-gridfieldextensions": "3.1 as 3.0.x-dev",
         "i-lateral/silverstripe-custommenus": "^2.0",
