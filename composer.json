@@ -5,18 +5,29 @@
     "homepage": "http://silverstripe.org",
     "license": "BSD-3-Clause",
     "require": {
-        "silverstripe/recipe-cms": "^1.0",
-        "silverstripe/blog": "master",
+        "silverstripe/recipe-plugin": "^1",
+        "silverstripe/recipe-core": "1.1.2@stable",
+        "silverstripe/admin": "1.1.2@stable",
+        "silverstripe/asset-admin": "1.1.2@stable",
+        "silverstripe/campaign-admin": "1.1.2@stable",
+        "silverstripe/cms": "4.1.2@stable",
+        "silverstripe/errorpage": "1.1.2@stable",
+        "silverstripe/graphql": "1.1.2@stable",
+        "silverstripe/reports": "4.1.2@stable",
+        "silverstripe/siteconfig": "4.1.2@stable",
+        "silverstripe/versioned": "1.1.2@stable",
+        "silverstripe/blog": "^3.0",
         "silverstripe/userforms": "5.*",
-        "silverstripe/widgets": "master",
+        "silverstripe/widgets": "^2.0",
         "ilateral/silverstripe-bootstrap-4": "dev-master",
         "axllent/silverstripe-scaled-uploads": "^2.1",
         "i-lateral/silverstripe-childhubpage": "^2.0",
         "jonom/focuspoint": "^3.0",
         "heyday/silverstripe-gridfieldversionedorderablerows": "ss4-upgrade-dev",
-        "symbiote/silverstripe-gridfieldextensions": "3.1 as 3.0.x-dev",
+        "symbiote/silverstripe-gridfieldextensions": "^3.1",
         "i-lateral/silverstripe-custommenus": "^2.0",
-        "fractas/cookiepolicy": "^2.0"
+        "fractas/cookiepolicy": "^2.0",
+        "i-lateral/silverstripe-socialnav": "^2.0"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"
@@ -27,6 +38,20 @@
             "app/*",
             "themes/custom/*",
             "index.php",
+            "web.config"
+        ],
+        "project-files-installed": [
+            "mysite/.htaccess",
+            "mysite/_config.php",
+            "mysite/_config/mysite.yml",
+            "mysite/code/Page.php",
+            "mysite/code/PageController.php"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
             "web.config"
         ]
     },
