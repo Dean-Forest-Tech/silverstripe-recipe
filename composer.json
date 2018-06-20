@@ -27,7 +27,8 @@
         "symbiote/silverstripe-gridfieldextensions": "^3.1",
         "i-lateral/silverstripe-custommenus": "^2.0",
         "fractas/cookiepolicy": "^2.0",
-        "i-lateral/silverstripe-socialnav": "^2.0"
+        "i-lateral/silverstripe-socialnav": "^2.0",
+        "i-lateral/silverstripe-deferedimages": "dev-master"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"
