@@ -19,7 +19,7 @@
         "silverstripe/blog": "^3.0",
         "silverstripe/userforms": "5.*",
         "silverstripe/widgets": "^2.0",
-        "ilateral/silverstripe-bootstrap-4": "dev-master",
+        "ilateral/silverstripe-bootstrap-4": "^1.0",
         "axllent/silverstripe-scaled-uploads": "^2.1",
         "i-lateral/silverstripe-childhubpage": "^2.0",
         "jonom/focuspoint": "^3.0",
@@ -28,7 +28,7 @@
         "i-lateral/silverstripe-custommenus": "^2.0",
         "fractas/cookiepolicy": "^2.0",
         "i-lateral/silverstripe-socialnav": "^2.0",
-        "i-lateral/silverstripe-deferedimages": "dev-master"
+        "i-lateral/silverstripe-deferedimages": "^1.0"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"
