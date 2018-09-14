@@ -19,6 +19,12 @@ class AppSiteConfig extends DataExtension
         'Background' => Image::class,
         'ContactPage' => ContactPage::class
     ];
+    
+    private static $owns = [
+        'Logo',
+        'Icon',
+        'Background'
+    ];
 
     public function updateCMSFields(FieldList $fields)
     {
