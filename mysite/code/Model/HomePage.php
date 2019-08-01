@@ -9,6 +9,8 @@ use SilverStripe\Forms\GridField\GridFieldEditButton;
 
 class HomePage extends Page
 {
+    private static $icon_class = 'font-icon-p-home';
+    
     private static $db = [];
 
     private static $has_one = [];
