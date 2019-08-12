@@ -2,7 +2,7 @@
 <div class="row">
     <% if $FeaturedImage %>
         <div class="col-sm" role="main">
-            <p class="banner-image"><img class="img-fluid" src="$FeaturedImage.FocusFill(1200,500).URL" alt="$FeaturedImage.Title"></p>
+            <p class="banner-image">$FeaturedImage.ContentBanner</p>
         </div>
     <% end_if %>
 	<div class="col-sm content" role="main">

@@ -4,9 +4,15 @@
     "description": "SilverStripe recipe for fully featured page and asset content editing",
     "homepage": "http://silverstripe.org",
     "license": "BSD-3-Clause",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:Makreig/Silverstripe-SEO.git"
+        }
+    ],
     "require": {
         "silverstripe/recipe-plugin": "^1",
-        "silverstripe/recipe-core": "1.1.2@stable",
+        "silverstripe/recipe-cms": "4.4@stable",
         "silverstripe/admin": "1.1.2@stable",
         "silverstripe/asset-admin": "1.1.2@stable",
         "silverstripe/campaign-admin": "1.1.2@stable",
@@ -28,7 +34,9 @@
         "i-lateral/silverstripe-custommenus": "^2.0",
         "fractas/cookiepolicy": "^2.0",
         "i-lateral/silverstripe-socialnav": "^2.0",
-        "i-lateral/silverstripe-deferedimages": "^1.0"
+        "i-lateral/silverstripe-deferedimages": "^1.0",
+        "undefinedoffset/silverstripe-nocaptcha": "^2.0",
+        "cyber-duck/silverstripe-seo": "4.3.x-dev"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"

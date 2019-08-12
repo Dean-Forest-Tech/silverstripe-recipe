@@ -1,0 +1,80 @@
+---
+Name: myimages
+After: 'silverstripe-responsive-images/*'
+---
+Heyday\ResponsiveImages\ResponsiveImageExtension:
+  default_method: FocusFill
+  sets:
+    FullwidthBanner:
+      arguments:
+        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [3840, 1200] # xl
+        '(min-width: 1200px)': [1920, 600]
+        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [2400, 1100] # lg
+        '(min-width: 992px)': [1200, 550]
+        '(min-width: 768px) and (min-device-pixel-ratio: 2.0)': [1948, 1100] # md
+        '(min-width: 768px)': [992, 550]
+      default_arguments: [540, 540] # xs
+    ContentBanner:
+      arguments:
+        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [2400, 1200] # xl
+        '(min-width: 1200px)': [1200, 600]
+        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [1948, 1000] # lg
+        '(min-width: 992px)': [992, 500]
+        '(min-width: 768px) and (min-device-pixel-ratio: 2.0)': [1536, 1000] # md
+        '(min-width: 768px)': [768, 500]
+      default_arguments: [540, 540] # xs
+    SixByFour:
+      arguments:
+        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [2280, 1540] # xl
+        '(min-width: 1200px)': [1080, 760]
+        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [1920, 1280] # lg
+        '(min-width: 992px)': [960, 640]
+        '(min-width: 768px) and (min-device-pixel-ratio: 2.0)': [1440, 960] # md
+        '(min-width: 768px)': [720, 480]
+      default_arguments: [540, 360] # xs
+    FourByThree:
+      arguments:
+        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [2280, 1920] # xl
+        '(min-width: 1200px)': [1080, 960]
+        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [1920, 1540] # lg
+        '(min-width: 992px)': [960, 720]
+        '(min-width: 768px) and (min-device-pixel-ratio: 2.0)': [1440, 1080] # md
+        '(min-width: 768px)': [720, 540]
+      default_arguments: [540, 405] # xs
+    Square:
+      arguments:
+        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [2280, 2280] # xl
+        '(min-width: 1200px)': [1080, 1080]
+        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [1920, 1920] # lg
+        '(min-width: 992px)': [960, 960]
+        '(min-width: 768px) and (min-device-pixel-ratio: 2.0)': [1440, 1440] # md
+        '(min-width: 768px)': [720, 720]
+      default_arguments: [540, 540] # xs
+    FourByTwo:
+      arguments:
+        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [2280, 1080] # xl
+        '(min-width: 1200px)': [1080, 540]
+        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [1920, 960] # lg
+        '(min-width: 992px)': [960, 480]
+        '(min-width: 768px) and (min-device-pixel-ratio: 2.0)': [1440, 720] # md
+        '(min-width: 768px)': [720, 360]
+      default_arguments: [540, 270] # xs
+    ThreebyFour:
+      arguments:
+        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [1920, 2280] # xl
+        '(min-width: 1200px)': [960, 1080]
+        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [1540, 1920] # lg
+        '(min-width: 992px)': [720, 960]
+        '(min-width: 768px) and (min-device-pixel-ratio: 2.0)': [1080, 1440] # md
+        '(min-width: 768px)': [540, 720]
+      default_arguments: [405, 540] # xs
+    GalleryThumb:
+      template: Includes/GalleryThumbnail
+      arguments:
+        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [2280, 2280] # xl
+        '(min-width: 1200px)': [1080, 1080]
+        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [1920, 1920] # lg
+        '(min-width: 992px)': [960, 960]
+        '(min-width: 768px) and (min-device-pixel-ratio: 2.0)': [1440, 1440] # md
+        '(min-width: 768px)': [720, 720]
+      default_arguments: [540, 540] # xs
