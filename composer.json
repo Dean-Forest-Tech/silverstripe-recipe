@@ -27,7 +27,8 @@
         "i-lateral/silverstripe-socialnav": "^2.0",
         "i-lateral/silverstripe-deferedimages": "^1.0",
         "undefinedoffset/silverstripe-nocaptcha": "^2.0",
-        "cyber-duck/silverstripe-seo": "4.3.x-dev"
+        "wilr/silverstripe-googlesitemaps": "^2.1",
+        "hubertusanton/silverstripe-seo": "^4.0"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"
