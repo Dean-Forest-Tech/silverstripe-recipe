@@ -11,10 +11,8 @@
         }
     ],
     "require": {
-        "silverstripe/recipe-plugin": "^1",
-        "silverstripe/recipe-cms": "4.4@stable",
+        "silverstripe/recipe-form-building": "^1.4",
         "silverstripe/blog": "^3.0",
-        "silverstripe/userforms": "5.*",
         "silverstripe/widgets": "^2.0",
         "ilateral/silverstripe-bootstrap-4": "^1.0",
         "axllent/silverstripe-scaled-uploads": "^2.1",
