@@ -1,29 +1,25 @@
 {
     "name": "i-lateral/ss4-recipe",
     "type": "silverstripe-recipe",
-    "description": "SilverStripe recipe for fully featured page and asset content editing",
+    "description": "SilverStripe 'kitchen sink' recipe for full CMS features",
     "homepage": "http://silverstripe.org",
     "license": "BSD-3-Clause",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:Makreig/Silverstripe-SEO.git"
-        }
-    ],
     "require": {
         "silverstripe/recipe-form-building": "^1.4",
         "silverstripe/blog": "^3.0",
         "silverstripe/widgets": "^2.0",
         "ilateral/silverstripe-bootstrap-4": "^1.0",
-        "axllent/silverstripe-scaled-uploads": "^2.1",
+        "ilateral/silverstripe-modern": "^1.0",
         "i-lateral/silverstripe-childhubpage": "^2.0",
+        "i-lateral/silverstripe-socialnav": "^2.0",
+        "i-lateral/silverstripe-deferedimages": "^1.0",
+        "i-lateral/silverstripe-custommenus": "^2.0",
+        "i-lateral/silverstripe-gallery": "^2.0",
+        "axllent/silverstripe-scaled-uploads": "^2.1",
         "jonom/focuspoint": "^3.0",
         "heyday/silverstripe-gridfieldversionedorderablerows": "ss4-upgrade-dev",
         "symbiote/silverstripe-gridfieldextensions": "^3.1",
-        "i-lateral/silverstripe-custommenus": "^2.0",
         "fractas/cookiepolicy": "^2.0",
-        "i-lateral/silverstripe-socialnav": "^2.0",
-        "i-lateral/silverstripe-deferedimages": "^1.0",
         "undefinedoffset/silverstripe-nocaptcha": "^2.0",
         "wilr/silverstripe-googlesitemaps": "^2.1",
         "hubertusanton/silverstripe-seo": "^4.0"
