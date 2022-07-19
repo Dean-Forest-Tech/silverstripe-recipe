@@ -1,28 +1,50 @@
-## SilverStripe CMS Recipe
+# ilateral SilverStripe Kitchen Sink Recipe
 
-Base page and asset content-editing recipe for a SilverStripe ([http://silverstripe.org](http://silverstripe.org))
-installation. This includes the modules:
+Base SilverStripe website install that contains
+all the modules we commonly use.
 
-Provided by [silverstripe/recipe-core]:
+## Creating a new project
 
- * [framework](http://github.com/silverstripe/silverstripe-framework): Module including the base framework
- * [config](https://github.com/silverstripe/silverstripe-config): Core config library
- * [assets](http://github.com/silverstripe/silverstripe-assets): Filesystem module
+Recipes can be introduced to any existing project (even if not created on a silverstripe base project)
 
-Provided by [silverstripe/recipe-cms]:
+```shell
+$ composer init
+$ composer require i-lateral/ss4-recipe
+````
 
- * [admin](http://github.com/silverstripe/silverstripe-admin)
- * [asset-admin](http://github.com/silverstripe/silverstripe-asset-admin)
- * [campaign-admin](http://github.com/silverstripe/silverstripe-campaign-admin)
- * [cms](http://github.com/silverstripe/silverstripe-cms)
- * [errorpage](http://github.com/silverstripe/silverstripe-errorpage)
- * [reports](http://github.com/silverstripe/silverstripe-reports)
- * [graphql](http://github.com/silverstripe/silverstripe-graphql)
- * [siteconfig](http://github.com/silverstripe/silverstripe-siteconfig)
- * [versioned](http://github.com/silverstripe/silverstripe-versioned)
+Alternatively you can create a new project based on an existing recipe
 
-This can be either added to an existing project or used as a project base for creating a
-fully featured SilverStripe CMS project.
+```shell
+$ composer create-project i-lateral/ss4-recipe ./myssproject ^1.0@dev
+```
 
-See the [recipe plugin](https://github.com/silverstripe/recipe-plugin) page for instructions on how
-SilverStripe recipes work.
+## Inlining recipes
+
+You can "inline" either a previously installed recipe, or a new one that you would like to include
+dependencies for in your main project. By inlining a recipe, you promote its requirements, as well as
+its project files, up into your main project, and remove the recipe itself from your dependencies.
+
+This can be done with either `update-recipe`, which will update a recipe, or `require-recipe` which will
+install a new recipe.
+
+Note that if you wish to run this command you must first install either a recipe via normal composer
+commands, or install the recipe plugin:
+
+```shell
+$ composer init
+$ composer require i-lateral/ss4-recipe ^0.1
+$ composer require-recipe i-lateral/ss4-recipe ^1.0@dev
+```
+
+or
+
+```shell
+$ composer init
+$ composer require i-lateral/ss4-recipe ^1.0@dev
+$ composer update-recipe i-lateral/ss4-recipe
+```
+
+## Further Docs
+
+More comprehensive documentation can be found at the [recipe
+plugin github page](https://github.com/silverstripe/recipe-plugin)
