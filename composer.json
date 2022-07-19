@@ -27,9 +27,6 @@
         "wilr/silverstripe-googlesitemaps": "^2.1",
         "hubertusanton/silverstripe-seo": "^4.0"
     },
-    "require-dev": {
-        "phpunit/PHPUnit": "^5.7"
-    },
     "extra": {
         "project-files": [
             ".htaccess",
