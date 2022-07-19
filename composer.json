@@ -39,6 +39,9 @@
             "app/src/*",
             "themes/custom/*"
         ],
+        "expose": [
+            "themes/custom/dist"
+        ],
         "resources-dir": "_resources"
     },
     "config": {
