@@ -1,6 +1,7 @@
 const Webpack = require('webpack');
 const Path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const PATHS = {
   MODULES: Path.resolve('node_modules'),
   ROOT: Path.resolve(),
@@ -48,7 +49,7 @@ module.exports = {
                 generator: {
                     filename: '[name][ext]',
                     publicPath: 'images/',
-                    outputPath: 'dist/images'
+                    outputPath: 'images/'
                 }
             },
             {
@@ -57,7 +58,7 @@ module.exports = {
                 generator: {
                     filename: '[name][ext]',
                     publicPath: 'fonts/',
-                    outputPath: 'dist/fonts'
+                    outputPath: 'fonts/'
                 }
             }
         ]
@@ -70,17 +71,12 @@ module.exports = {
             }
         ),
         new ESLintPlugin({
-            files: ['src/javascript/**/*.js'],
+            files: ['src/javascript/*.js'],
         }),
         new Webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery'
         })
-    ],
-    resolve: {
-        alias: {
-        '~': PATHS.SRC,
-        }
-    },
+    ]
 };
