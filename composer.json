@@ -10,6 +10,8 @@
         "silverstripe/widgets": "^2.0",
         "ilateral/silverstripe-bootstrap-4": "^1.0",
         "ilateral/silverstripe-modern": "^1.0",
+        "ilateral/silverstripe-fancy-top-nav": "^1.0",
+        "ilateral/silverstripe-sideswipe-theme": "^1.0",
         "i-lateral/silverstripe-childhubpage": "^2.0",
         "i-lateral/silverstripe-socialnav": "^2.0",
         "i-lateral/silverstripe-deferedimages": "^1.0",
