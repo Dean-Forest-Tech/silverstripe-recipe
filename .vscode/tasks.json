@@ -1,0 +1,88 @@
+{
+    // Automated SilverStripe build tasks that can be run
+    // via docker development webserver:
+    //
+    //    https://github.com/i-lateral/development-webserver
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run dev/build through docker",
+            "type": "shell",
+            "command": "docker-compose -f ../../docker-compose.yml exec -u www-data web /var/www/html/${workspaceFolderBasename}/vendor/bin/sake dev/build flush=1",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run dev/task through docker",
+            "type": "shell",
+            "command": "docker-compose -f ../../docker-compose.yml exec -u www-data web /var/www/html/${workspaceFolderBasename}/vendor/bin/sake dev/tasks/${input:SakeTask} flush=1",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "List Docker Containers",
+            "type": "shell",
+            "command": "docker container list",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Composer Command",
+            "type": "shell",
+            "command": "docker-compose -f ../../docker-compose.yml exec -u www-data web /usr/local/bin/composer --working-dir=/var/www/html/${workspaceFolderBasename} ${input:ComposerCommand}",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Clear Cache",
+            "type": "shell",
+            "command": "rm -fR ./silverstripe-cache/*",
+            "group": "build"
+        },
+        {
+            "label": "Load SSPAK",
+            "type": "shell",
+            "command": "docker-compose -f ../../docker-compose.yml exec -u www-data web sspak load ${input:SSPAKLocation} /var/www/html/${workspaceFolderBasename}",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Save SSPAK",
+            "type": "shell",
+            "command": "docker-compose -f ../../docker-compose.yml exec web sspak save /var/www/html/${workspaceFolderBasename} ${input:SSPAKLocation}",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "SSPAKLocation",
+            "description": "Enter location (inside docker) of sspak archive",
+            "default": "/home/www-data/files/filename.sspak",
+            "type": "promptString"
+        },
+        {
+            "id": "DockerCommand",
+            "description": "Enter docker command to run (EG: build)",
+            "default": "up",
+            "type": "pickString",
+            "options": [
+                "up",
+                "down",
+                "build"
+            ]
+        },
+        {
+            "id": "ComposerCommand",
+            "description": "Enter composer command to run (EG: install)",
+            "default": "install",
+            "type": "promptString"
+        },
+        {
+            "id": "SakeTask",
+            "description": "Enter sake build task command to run (leave blank to list)",
+            "default": "",
+            "type": "promptString"
+        }
+    ]
+}
