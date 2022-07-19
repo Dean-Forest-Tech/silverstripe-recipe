@@ -5,6 +5,10 @@
     "homepage": "http://silverstripe.org",
     "license": "BSD-3-Clause",
     "require": {
+        "php": "^7.4 || ^8.0",
+        "silverstripe/recipe-plugin": "^1.5",
+        "silverstripe/recipe-core": "^1.5",
+        "silverstripe/recipe-cms": "^4.7",
         "silverstripe/recipe-form-building": "^1.4",
         "silverstripe/blog": "^3.0",
         "silverstripe/widgets": "^2.0",
@@ -30,11 +34,12 @@
     "extra": {
         "project-files": [
             ".htaccess",
-            "app/*",
-            "themes/custom/*",
-            "index.php",
-            "web.config"
-        ]
+            "app/_config.php",
+            "app/_config/*",
+            "app/src/*",
+            "themes/custom/*"
+        ],
+        "resources-dir": "_resources"
     },
     "config": {
         "process-timeout": 600
