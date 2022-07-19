@@ -1,5 +1,8 @@
 <?php
 
+namespace App\CMS;
+
+use Page;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use Heyday\GridFieldVersionedOrderableRows\GridFieldVersionedOrderableRows;
@@ -10,10 +13,6 @@ use SilverStripe\Forms\GridField\GridFieldEditButton;
 class HomePage extends Page
 {
     private static $icon_class = 'font-icon-p-home';
-    
-    private static $db = [];
-
-    private static $has_one = [];
 
     private static $has_many = [
         'Sections' => Page::class
@@ -23,8 +22,8 @@ class HomePage extends Page
     {
         $fields = parent::getCMSFields();
 
-        $config = GridFieldConfig_RelationEditor::create();
-        $config->addComponent(new GridFieldVersionedOrderableRows('HomeSort'))
+        $config = GridFieldConfig_RelationEditor::create()
+            ->addComponent(new GridFieldVersionedOrderableRows('HomeSort'))
             ->removeComponentsByType(GridFieldEditButton::class)
             ->addComponent(new GridFieldSiteTreeState())
             ->addComponent(new GridFieldSiteTreeEditButton());
