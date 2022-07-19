@@ -48,3 +48,67 @@ $ composer update-recipe i-lateral/ss4-recipe
 
 More comprehensive documentation can be found at the [recipe
 plugin github page](https://github.com/silverstripe/recipe-plugin)
+
+## Themes
+
+This recipe installs multiple possible base themes, but
+also builds a "custom" theme that can be used to overwrite
+the default selected theme.
+
+If you want to switch out the default base theme to an
+alternative, it is recommended that you change `bootstrap`
+in `theme.yml` to your alternative, EG:
+
+    SilverStripe\View\SSViewer:
+      themes:
+        - 'custom'
+        - 'deferedimages'
+        - 'bootstrap' # Change this to your base theme
+        - '$default'
+
+### Webpack
+
+The custom theme (and parent themes) are designed to use
+[webpack](https://webpack.js.org/) to help package and
+manage CSS and JS requirements.
+
+Alternativley you can just use the default SilverStripe way
+(add your own files to dist/css or dist/js) but you will have
+to manage combining and compressing them.
+
+This is handled automatically via `webpack`.
+
+#### Getting Started
+
+To get started using webpack to manage your JS and CSS
+requirements, first you have to install [yarn](https://yarnpkg.com/getting-started/install)
+
+Once you have installed yarn, navigate to your theme dir:
+
+    # cd /path/to/my/project/themes/custom
+
+Now install node modules (can take a little while)
+
+    # yarn install
+
+#### Adding Custom CSS/JS
+
+Next add your custom JS or CSS (SASS) to the relevent folders
+(`themes/custom/src/javascript` or `themes/custom/src/scss` respectivley), if you add any new files, you will need to
+import them in the following locations:
+
+* SCSS Files are added to `themes/custom/src/scss/bundle.scss`
+* JS files will need to be mapped directly in `themes/custom/webpack.common.js` 
+
+Finally, run one of the following command to transpile/minify your files
+
+* `yarn dev`: Transpile all files for development purposes (do not minify)
+* `yarn build`: Transpile AND minify for production
+
+##### Linting
+
+Some linting functionality is included to help keep code tidy.
+If you want to lint/tidy your CSS/JS you can run the following:
+
+* `yarn lint:styles` or `yarn lint:styles:fix` Check or attempt to fix issues with SCSS
+* `yarn lint:scripts` or `yarn lint:scripts:fix` Check or attempt to fix issues with JS
