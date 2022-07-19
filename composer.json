@@ -33,6 +33,8 @@
     },
     "extra": {
         "project-files": [
+            ".vscode/*",
+            ".gitignore",
             ".htaccess",
             "app/_config.php",
             "app/_config/*",
