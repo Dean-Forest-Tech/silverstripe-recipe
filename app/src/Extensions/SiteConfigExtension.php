@@ -2,12 +2,14 @@
 
 namespace App\Extensions;
 
-use SilverStripe\Forms\TreeDropdownField;
+use App\CMS\ContactPage;
+use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
-use SilverStripe\Assets\Image;
-use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\DropdownField;
 
 class SiteConfigExtension extends DataExtension
 {
@@ -28,8 +30,15 @@ class SiteConfigExtension extends DataExtension
         'Background'
     ];
 
+    private static $field_labels = [
+        'ContactPage' => '"Contact Page" for this site'
+    ];
+
     public function updateCMSFields(FieldList $fields)
     {
+        /** @var SiteTree */
+        $owner = $this->getOwner();
+
         $fields->addFieldsToTab(
             'Root.Main',
             [
@@ -49,17 +58,16 @@ class SiteConfigExtension extends DataExtension
         $fields->addFieldsToTab(
             'Root.Main',
             [
-
                 UploadField::create(
                     "Background",
                     "Site Background"
                 ),
                 CheckboxField::create("TileBackground"),
-                TreeDropdownField::create(
+                DropdownField::create(
                     "ContactPageID",
-                    "Link to 'contact' page",
-                    'ContactPage'
-                )
+                    $owner->fieldLabel('ContactPage')
+                )->setSource(ContactPage::get()->map())
+                ->setEmptyString('')
             ]
         );
     }
