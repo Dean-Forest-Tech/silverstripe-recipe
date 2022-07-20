@@ -6,6 +6,8 @@ use Page;
 
 class ContactPage extends Page
 {
+    private static $icon_class = 'font-icon-p-mail';
+
     private static $db = [
         "PhoneNumber"   => "Varchar(20)",
         "Email"         => "Varchar(50)",
