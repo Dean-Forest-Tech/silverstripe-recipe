@@ -1,6 +1,9 @@
 ---
 Name: appextensions
 ---
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - App\Extensions\SiteTreeExtension
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - App\Extensions\SiteConfigExtension
