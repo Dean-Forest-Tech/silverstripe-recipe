@@ -1,5 +1,5 @@
 ---
-Name: myimages
+Name: appimages
 After: 'silverstripe-responsive-images/*'
 ---
 Heyday\ResponsiveImages\ResponsiveImageExtension:
