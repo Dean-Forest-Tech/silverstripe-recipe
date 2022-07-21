@@ -1,15 +1,22 @@
 ---
 Name: appextensions
 ---
+SilverStripe\Control\Controller:
+  extensions:
+    - App\Extensions\GDPRTagInserter
+
 SilverStripe\CMS\Model\SiteTree:
   extensions:
     - App\Extensions\SiteTreeExtension
+
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - App\Extensions\SiteConfigExtension
+
 SilverStripe\Blog\Model\Blog:
   extensions:
     - SilverStripe\Widgets\Extensions\WidgetPageExtension
+
 SilverStripe\Blog\Model\BlogPost:
   extensions:
     - SilverStripe\Widgets\Extensions\WidgetPageExtension
