@@ -18,6 +18,12 @@ class GDPRTagInserter extends TagInserter
 {
     public function afterCallActionHandler(HTTPRequest $request, $action, $response)
     {
+        $url = $request->getVar('url');
+
+        if ($url === "dev/build") {
+            return $response;
+        }
+
         /** @var ViewableData */
         $owner = $this->getOwner();
         $gdpr_cookie = (bool)Cookie::get('cookie_policy');
