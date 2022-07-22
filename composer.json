@@ -51,7 +51,10 @@
             "themes/custom/*"
         ],
         "expose": [
-            "themes/custom/dist"
+            "themes/custom/css",
+            "themes/custom/javascript",
+            "themes/custom/fonts",
+            "themes/custom/images"
         ],
         "resources-dir": "_resources"
     },

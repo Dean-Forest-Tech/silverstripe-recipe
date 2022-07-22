@@ -29,8 +29,9 @@ module.exports = {
         ]
     },
     output: {
+        path: PATHS.ROOT,
         filename: 'javascript/[name].js',
-        publicPath: PATHS.DIST
+        publicPath: PATHS.ROOT
     },
     target: ['web', 'es5'],
     module: {
@@ -48,8 +49,8 @@ module.exports = {
                 type: 'asset/resource',
                 generator: {
                     filename: '[name][ext]',
-                    publicPath: 'images/',
-                    outputPath: 'images/'
+                    publicPath: '../images',
+                    outputPath: 'images'
                 }
             },
             {
@@ -57,8 +58,8 @@ module.exports = {
                 type: 'asset/resource',
                 generator: {
                     filename: '[name][ext]',
-                    publicPath: 'fonts/',
-                    outputPath: 'fonts/'
+                    publicPath: '../fonts',
+                    outputPath: 'fonts'
                 }
             }
         ]
