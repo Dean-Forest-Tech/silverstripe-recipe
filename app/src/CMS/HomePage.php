@@ -12,6 +12,8 @@ use SilverStripe\Forms\GridField\GridFieldEditButton;
 
 class HomePage extends Page
 {
+    private static $table_name = 'HomePage';
+
     private static $icon_class = 'font-icon-p-home';
 
     private static $has_many = [
