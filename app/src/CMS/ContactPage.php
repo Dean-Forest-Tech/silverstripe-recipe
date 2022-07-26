@@ -7,11 +7,13 @@ use SilverStripe\View\HTML;
 
 /**
  * @property string PhoneNumber
+ * @property string MobileNumber
  * @property string Email
  * @property string Address
  * @property string MapEmbedURL
  * @property string InlineAddress
  * @property string TrimmedPhoneNumber
+ * @property string TrimmedMobileNumber
  * @property string MapEmbedCode
  */
 class ContactPage extends Page
@@ -22,6 +24,7 @@ class ContactPage extends Page
 
     private static $db = [
         "PhoneNumber"   => "Varchar(20)",
+        "MobileNumber"  => "Varchar(20)",
         "Email"         => "Varchar(50)",
         "Address"       => "Text",
         "MapEmbedURL"   => "Text"
@@ -30,6 +33,7 @@ class ContactPage extends Page
     private static $casting = [
         'InlineAddress' => 'Varchar',
         'TrimmedPhoneNumber' => 'Varchar',
+        'TrimmedMobileNumber' => 'Varchar',
         'MapEmbedCode' => 'HTMLText'
     ];
 
@@ -48,6 +52,9 @@ class ContactPage extends Page
                 $this
                     ->dbObject('PhoneNumber')
                     ->scaffoldFormField($this->fieldLabel('PhoneNumber')),
+                $this
+                    ->dbObject('MobileNumber')
+                    ->scaffoldFormField($this->fieldLabel('MobileNumber')),
                 $this
                     ->dbObject('Email')
                     ->scaffoldFormField($this->fieldLabel('Email')),
@@ -71,6 +78,21 @@ class ContactPage extends Page
     public function getTrimmedPhoneNumber(): string
     {
         return trim(str_replace(" ","",$this->PhoneNumber));
+    }
+
+    public function getPhoneLink(): string
+    {
+        return "tel:" . $this->TrimmedPhoneNumber;
+    }
+
+    public function getTrimmedMobileNumber(): string
+    {
+        return trim(str_replace(" ","",$this->MobileNumber));
+    }
+
+    public function getMobileLink(): string
+    {
+        return "tel:" . $this->TrimmedMobileNumber;
     }
 
     public function getMapEmbedCode(): string
