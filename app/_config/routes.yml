@@ -1,0 +1,7 @@
+---
+Name: approutes
+After: '*'
+---
+SilverStripe\Control\Director:
+  rules:
+    fetchcookiepolicy: App\Control\CustomCookiePolicyController
