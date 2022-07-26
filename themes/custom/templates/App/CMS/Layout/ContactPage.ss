@@ -10,19 +10,30 @@
 				<p>
 					<strong>Contact Info:</strong>
 				</p>
-					<% if $Address %>
-						<address>
-							$Address
-						</address>
-					<% end_if %>
+				<% if $Address %>
+					<address>
+						$Address
+					</address>
+				<% end_if %>
 				<% if $PhoneNumber || $Email %>
 					<p>
 						<% if $PhoneNumber %>
-							$PhoneNumber
+							<a href="{$PhoneLink}">
+								<i class="fas fa-phone"></i>
+								{$PhoneNumber}
+							</a><br/>
+						<% end_if %>
+						<% if $MobileNumber %>
+							<a href="{$MobileLink}">
+								<i class="fas fa-mobile"></i>
+								{$MobileNumber}
+							</a><br/>
 						<% end_if %>
 						<% if $Email %>
-							<% if $PhoneNumber %><br /><% end_if %>
-							<a href="mailto:{$Email}">$Email</a>
+							<a href="mailto:{$Email}">
+								<i class="fas fa-at"></i>
+								{$Email}
+							</a>
 						<% end_if %>
 					</p>
 				<% end_if %>
