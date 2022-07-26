@@ -3,7 +3,17 @@
 namespace App\CMS;
 
 use Page;
+use SilverStripe\View\HTML;
 
+/**
+ * @property string PhoneNumber
+ * @property string Email
+ * @property string Address
+ * @property string MapEmbedURL
+ * @property string InlineAddress
+ * @property string TrimmedPhoneNumber
+ * @property string MapEmbedCode
+ */
 class ContactPage extends Page
 {
     private static $table_name = 'ContactPage';
@@ -14,13 +24,19 @@ class ContactPage extends Page
         "PhoneNumber"   => "Varchar(20)",
         "Email"         => "Varchar(50)",
         "Address"       => "Text",
-        "MapEmbed"      => "HTMLText"        
+        "MapEmbedURL"   => "Text"
     ];
 
     private static $casting = [
         'InlineAddress' => 'Varchar',
-        'TrimmedPhoneNumber' => 'Varchar'
+        'TrimmedPhoneNumber' => 'Varchar',
+        'MapEmbedCode' => 'HTMLText'
     ];
+
+    public function isContactPage(): bool
+    {
+        return true;
+    }
 
     public function getCMSFields()
     {
@@ -39,8 +55,8 @@ class ContactPage extends Page
                     ->dbObject('Address')
                     ->scaffoldFormField($this->fieldLabel('Address')),
                 $this
-                    ->dbObject('MapEmbed')
-                    ->scaffoldFormField($this->fieldLabel('MapEmbed'))
+                    ->dbObject('MapEmbedURL')
+                    ->scaffoldFormField($this->fieldLabel('MapEmbedURL'))
             ]
         );
 
@@ -55,5 +71,22 @@ class ContactPage extends Page
     public function getTrimmedPhoneNumber(): string
     {
         return trim(str_replace(" ","",$this->PhoneNumber));
+    }
+
+    public function getMapEmbedCode(): string
+    {
+        if (empty($this->MapEmbedURL)) {
+            return "";
+        }
+
+        return HTML::createTag(
+            'iframe',
+            [
+                'src' => $this->MapEmbedURL,
+                'class' => 'embed-responsive-item',
+                'loading' => "lazy",
+                'referrerpolicy' => "no-referrer-when-downgrade"
+            ]
+        );
     }
 }

@@ -1,7 +1,7 @@
-<% if $MapEmbed %>
+<% if $MapEmbedCode %>
     <div class="map-row row">
         <div class="mb-4 embed-responsive embed-responsive-map">
-            $MapEmbed
+            $MapEmbedCode
         </div>
     </div>
 <% else_if $FeaturedImage %>
