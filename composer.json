@@ -12,6 +12,7 @@
         "silverstripe/recipe-form-building": "^1.7",
         "silverstripe/blog": "^3.0",
         "silverstripe/redirectedurls": "^2.1.0",
+        "silverstripe/login-forms": "^4.3",
         "silverstripe/widgets": "^2.0",
         "ilateral/silverstripe-bootstrap-4": "^1.0",
         "ilateral/silverstripe-modern": "^1.0",
