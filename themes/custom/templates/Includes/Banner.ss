@@ -5,11 +5,11 @@
         </div>
     </div>
 <% else_if $FeaturedImage %>
-    <p class="banner-image row mb-4 d-block">
+    <p class="banner-image mb-4 d-block">
         $FeaturedImage.ContentBanner
     </p>
 <% else_if $Parent.FeaturedImage %>
-    <p class="banner-image row mb-4 d-block">
+    <p class="banner-image mb-4 d-block">
         $Parent.FeaturedImage.ContentBanner
     </p>
 <% end_if %>
