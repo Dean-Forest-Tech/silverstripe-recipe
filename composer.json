@@ -25,6 +25,7 @@
         "i-lateral/silverstripe-gallery": "^2.0",
         "i-lateral/silverstripe-featuredimage": "^1.0",
         "i-lateral/silverstripe-testimonials": "^4.0",
+        "i-lateral/silverstripe-systemmessages": "^3.0",
         "axllent/silverstripe-scaled-uploads": "^2.1",
         "fractas/cookiepolicy": "^2.0",
         "heyday/silverstripe-gridfieldversionedorderablerows": "ss4-upgrade-dev",
