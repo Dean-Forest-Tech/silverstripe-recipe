@@ -49,8 +49,8 @@ module.exports = {
                 type: 'asset/resource',
                 generator: {
                     filename: '[name][ext]',
-                    publicPath: '../images',
-                    outputPath: 'images'
+                    publicPath: 'images/', // Update ref in SCSS/CSS
+                    outputPath: 'images' // Location of files during build
                 }
             },
             {
@@ -58,8 +58,8 @@ module.exports = {
                 type: 'asset/resource',
                 generator: {
                     filename: '[name][ext]',
-                    publicPath: '../fonts',
-                    outputPath: 'fonts'
+                    publicPath: 'fonts/', // Update ref in SCSS/CSS
+                    outputPath: 'fonts' // Location of files during build
                 }
             }
         ]
