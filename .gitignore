@@ -68,6 +68,10 @@ web.config
 /_resources/
 /public/_resources/
 
+# SilverStripe Assets
+/assets/
+/public/assets/
+
 # SilverStripe Themes
 /themes/simple/
 /themes/bootstrap/
