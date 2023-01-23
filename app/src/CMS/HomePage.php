@@ -20,6 +20,10 @@ class HomePage extends Page
         'Sections' => Page::class
     ];
 
+    private static $owns = [
+        'Sections'
+    ];
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
