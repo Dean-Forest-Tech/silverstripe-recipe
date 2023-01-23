@@ -1,5 +1,3 @@
-<% include Banner %>
-
 <div class="col-sm content" role="main">
 	<div class="row">
 		<div class="col-sm">
