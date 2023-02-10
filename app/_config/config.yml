@@ -13,5 +13,8 @@ SilverStripe\Core\Injector\Injector:
     constructor:
       - { driver: imagick }
 
+SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+    default_spam_protector: UndefinedOffset\NoCaptcha\Forms\NocaptchaProtector
+
 SilverStripe\i18n\i18n:
   default_locale: 'en_GB'
