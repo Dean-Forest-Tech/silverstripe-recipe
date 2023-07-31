@@ -42,7 +42,7 @@
         "wildbit/swiftmailer-postmark": "^3.3"
     },
     "require-dev": {
-        "deployer/deployer": "v6.8.0"
+        "deployer/deployer": "^7.3"
     },
     "extra": {
         "project-files": [
