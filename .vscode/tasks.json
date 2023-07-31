@@ -8,14 +8,14 @@
         {
             "label": "Run dev/build through docker",
             "type": "shell",
-            "command": "docker-compose -f ../../docker-compose.yml exec -u www-data web /var/www/html/${workspaceFolderBasename}/vendor/bin/sake dev/build flush=1",
+            "command": "docker compose -f ../../docker-compose.yml exec -u www-data web /var/www/html/${workspaceFolderBasename}/vendor/bin/sake dev/build flush=1",
             "group": "build",
             "problemMatcher": []
         },
         {
             "label": "Run dev/task through docker",
             "type": "shell",
-            "command": "docker-compose -f ../../docker-compose.yml exec -u www-data web /var/www/html/${workspaceFolderBasename}/vendor/bin/sake dev/tasks/${input:SakeTask} flush=1",
+            "command": "docker compose -f ../../docker-compose.yml exec -u www-data web /var/www/html/${workspaceFolderBasename}/vendor/bin/sake dev/tasks/${input:SakeTask} flush=1",
             "group": "build",
             "problemMatcher": []
         },
@@ -29,7 +29,7 @@
         {
             "label": "Run Composer Command",
             "type": "shell",
-            "command": "docker-compose -f ../../docker-compose.yml exec -u www-data web /usr/local/bin/composer --working-dir=/var/www/html/${workspaceFolderBasename} ${input:ComposerCommand}",
+            "command": "docker compose -f ../../docker-compose.yml exec -u www-data web /usr/local/bin/composer --working-dir=/var/www/html/${workspaceFolderBasename} ${input:ComposerCommand}",
             "group": "build",
             "problemMatcher": []
         },
@@ -42,14 +42,14 @@
         {
             "label": "Load SSPAK",
             "type": "shell",
-            "command": "docker-compose -f ../../docker-compose.yml exec -u www-data web sspak load ${input:SSPAKLocation} /var/www/html/${workspaceFolderBasename}",
+            "command": "docker compose -f ../../docker-compose.yml exec -u www-data web sspak load ${input:SSPAKLocation} /var/www/html/${workspaceFolderBasename}",
             "group": "build",
             "problemMatcher": []
         },
         {
             "label": "Save SSPAK",
             "type": "shell",
-            "command": "docker-compose -f ../../docker-compose.yml exec web sspak save /var/www/html/${workspaceFolderBasename} ${input:SSPAKLocation}",
+            "command": "docker compose -f ../../docker-compose.yml exec web sspak save /var/www/html/${workspaceFolderBasename} ${input:SSPAKLocation}",
             "group": "build",
             "problemMatcher": []
         }
