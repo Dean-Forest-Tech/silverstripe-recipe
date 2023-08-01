@@ -8,6 +8,7 @@ node_modules/
 .sass-cache
 /**/*.js.map
 /**/*.css.map
+.yarn
 
 # Compiled Java class files
 *.class
@@ -17,6 +18,7 @@ node_modules/
 
 # ignore SilverStripe cache folder
 /silverstripe-cache/
+/.graphql-generated/
 
 # Log files
 *.log
