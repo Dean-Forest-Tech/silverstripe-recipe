@@ -1,5 +1,5 @@
 {
-    "name": "dft/ss4-recipe",
+    "name": "dft/silverstripe-recipe",
     "type": "silverstripe-recipe",
     "description": "SilverStripe 'kitchen sink' recipe for full CMS features",
     "homepage": "http://silverstripe.org",
