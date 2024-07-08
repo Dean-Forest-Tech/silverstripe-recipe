@@ -7,16 +7,33 @@ all the modules we commonly use.
 
 Recipes can be introduced to any existing project (even if not created on a silverstripe base project)
 
-```shell
+### SS5 Version:
+
+````shell
 $ composer init
-$ composer require i-lateral/ss4-recipe
+$ composer require dft/silverstripe-recipe:5.x-dev
+````
+
+### SS4 Version (depreciated):
+
+````shell
+$ composer init
+$ composer require dft/silverstripe-recipe:4.x-dev
 ````
 
 Alternatively you can create a new project based on an existing recipe
 
-```shell
-$ composer create-project i-lateral/ss4-recipe ./myssproject ^1.0@dev
-```
+### SS5 Version:
+
+````shell
+$ composer create-project dft/silverstripe-recipe ./myssproject 5.x-dev
+````
+
+### SS4 Version (depreciated):
+
+````shell
+$ composer create-project dft/silverstripe-recipe ./myssproject 4.x-dev
+````
 
 ## Inlining recipes
 
@@ -32,16 +49,16 @@ commands, or install the recipe plugin:
 
 ```shell
 $ composer init
-$ composer require i-lateral/ss4-recipe ^0.1
-$ composer require-recipe i-lateral/ss4-recipe ^1.0@dev
+$ composer require dft/silverstripe-recipe ^0.1
+$ composer require-recipe dft/silverstripe-recipe ^1.0@dev
 ```
 
 or
 
 ```shell
 $ composer init
-$ composer require i-lateral/ss4-recipe ^1.0@dev
-$ composer update-recipe i-lateral/ss4-recipe
+$ composer require dft/silverstripe-recipe ^1.0@dev
+$ composer update-recipe dft/silverstripe-recipe
 ```
 
 ## Further Docs
