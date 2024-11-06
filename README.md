@@ -1,4 +1,4 @@
-# ilateral SilverStripe Kitchen Sink Recipe
+# SilverStripe Kitchen Sink Recipe
 
 Base SilverStripe website install that contains
 all the modules we commonly use.

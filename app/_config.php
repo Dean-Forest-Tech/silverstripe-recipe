@@ -5,7 +5,7 @@ use SilverStripe\Core\Config\Config;
 use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\TagManager\Extension\TagInserter;
 use SilverStripe\CMS\Controllers\ContentController;
-use ilateral\SilverStripe\DeferedImages\DeferedImageShortcodeProvider;
+use DFT\SilverStripe\DeferedImages\DeferedImageShortcodeProvider;
 
 ShortcodeParser::get('default')
     ->register('image', [DeferedImageShortcodeProvider::class, 'handle_shortcode']);

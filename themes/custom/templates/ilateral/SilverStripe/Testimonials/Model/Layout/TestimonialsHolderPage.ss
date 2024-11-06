@@ -11,7 +11,7 @@
                         <div class="row">
                             <% loop $PaginatedTestimonials %>
                                 <div id="Testimonial$ID" class="testimonial col-12 col-md-6 col-lg-4">
-                                    <% include ilateral\SilverStripe\Testimonials\Includes\Testimonial %>
+                                    <% include DFT\SilverStripe\Testimonials\Includes\Testimonial %>
                                 </div>
                             <% end_loop %>
                         </div>

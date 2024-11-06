@@ -4,7 +4,7 @@
         <div class="row mb-4">
             <% loop $RandomTestimonials.Limit(4) %>
                 <div class="col">
-                    <% include ilateral\SilverStripe\Testimonials\Includes\Testimonial %>
+                    <% include DFT\SilverStripe\Testimonials\Includes\Testimonial %>
                 </div>
             <% end_loop %>
         </div>
