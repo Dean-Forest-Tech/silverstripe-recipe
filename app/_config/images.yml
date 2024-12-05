@@ -16,12 +16,12 @@ Heyday\ResponsiveImages\ResponsiveImageExtension:
       default_arguments: [540, 540] # xs
     ContentBanner:
       arguments:
-        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [2400, 1200] # xl
-        '(min-width: 1200px)': [1200, 600]
-        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [1948, 1000] # lg
-        '(min-width: 992px)': [992, 500]
+        '(min-width: 1200px) and (min-device-pixel-ratio: 2.0)': [2400, 800] # xl
+        '(min-width: 1200px)': [1200, 400]
+        '(min-width: 992px) and (min-device-pixel-ratio: 2.0)': [1948, 666] # lg
+        '(min-width: 992px)': [992, 333]
         '(min-width: 768px) and (min-device-pixel-ratio: 2.0)': [1536, 1000] # md
-        '(min-width: 768px)': [768, 500]
+        '(min-width: 768px)': [768, 333]
       default_arguments: [540, 540] # xs
     SixByFour:
       arguments:
