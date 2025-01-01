@@ -29,6 +29,7 @@
         "jonom/focuspoint": "^5",
         "jonom/silverstripe-betternavigator": "^6",
         "kinglozzer/metatitle": "^3",
+        "sminnee/tagmanager": "dev-master",
         "symbiote/silverstripe-gridfieldextensions": "^4",
         "tractorcow/silverstripe-robots": "^4.1",
         "undefinedoffset/silverstripe-nocaptcha": "^2.4",
