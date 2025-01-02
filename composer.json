@@ -23,6 +23,7 @@
         "dft/silverstripe-deferedimages": "^1.0",
         "dft/silverstripe-custommenus": "^2.0",
         "dft/silverstripe-testimonials": "^5.0",
+        "dft/silverstripe-gallery": "^3.0",
         "axllent/silverstripe-scaled-uploads": "^2.3",
         "fractas/cookiepolicy": "^2",
         "hubertusanton/silverstripe-seo": "^5",
